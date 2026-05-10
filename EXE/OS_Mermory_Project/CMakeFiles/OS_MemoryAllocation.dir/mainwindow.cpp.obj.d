@@ -432,6 +432,11 @@ CMakeFiles/OS_MemoryAllocation.dir/mainwindow.cpp.obj: \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qlayout.h \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qlayoutitem.h \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qgridlayout.h \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QHeaderView \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qheaderview.h \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QLabel \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qlabel.h \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtGui/qpicture.h \
@@ -451,6 +456,9 @@ CMakeFiles/OS_MemoryAllocation.dir/mainwindow.cpp.obj: \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QSpacerItem \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QSpinBox \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qspinbox.h \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QTableWidget \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qtablewidget.h \
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qtableview.h \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QVBoxLayout \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QWidget \
  G:/ASU_JOURNEY/ASU/6th_term/OS/Memory\ allocation\ Project/OS_Memory/OS_MemoryAllocation/MemoryCanvas.h \
@@ -461,8 +469,4 @@ CMakeFiles/OS_MemoryAllocation.dir/mainwindow.cpp.obj: \
  G:\ASU_JOURNEY\ASU\6th_term\OS\Memory\ allocation\ Project\OS_Memory\OS_MemoryAllocation\MemoryCanvas.h \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtGui/QIntValidator \
  G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QTableWidgetItem \
- G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qtablewidget.h \
- G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qtableview.h \
- G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qabstractitemview.h \
- G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtCore/qitemselectionmodel.h
+ G:/ASU_JOURNEY/ASU/Some_Setups/QT/Main_Software_Tool/6.11.0/mingw_64/include/QtWidgets/QHeaderView

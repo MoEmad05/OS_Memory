@@ -118,11 +118,29 @@
         </property>
         <layout class="QVBoxLayout">
          <item>
-          <widget class="QLineEdit" name="inputProcName">
-           <property name="placeholderText">
-            <string>Process Name (e.g. P1)</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout">
+           <item>
+            <widget class="QLineEdit" name="inputProcName">
+             <property name="placeholderText">
+              <string>Process Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lblNumSegs">
+             <property name="text">
+              <string>Max Segs:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="inputMaxSegments">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
          <item>
           <layout class="QHBoxLayout">
@@ -161,6 +179,31 @@
            <property name="text">
             <string>Allocate Segment</string>
            </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableSegments">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="columnCount">
+            <number>3</number>
+           </property>
+           <column>
+            <property name="text">
+             <string>Process</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Segment</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Size</string>
+            </property>
+           </column>
           </widget>
          </item>
         </layout>
