@@ -4,20 +4,18 @@ MemoryManager::MemoryManager(int totalSize) : totalMemorySize(totalSize) {}
 
 void MemoryManager::addInitialHole(int base, int size) {
     freeHoles.push_back({base, size});
-    coalesceHoles(); // Ensure they merge if they touch
+    coalesceHoles();
 }
 
 bool MemoryManager::allocateProcess(Process& process, bool isBestFit) {
-    // 1. Create a backup of holes for the "rollback" scenario
     QVector<Hole> backupHoles = freeHoles;
 
-    // 2. Try to allocate every segment
     for (int i = 0; i < process.segments.size(); ++i) {
         Segment& seg = process.segments[i];
         int targetHoleIdx = -1;
 
         if (isBestFit) {
-            int minLeftover = 1e9; // Infinity
+            int minLeftover = 1e9;
             for (int j = 0; j < freeHoles.size(); ++j) {
                 if (freeHoles[j].size >= seg.size) {
                     int leftover = freeHoles[j].size - seg.size;
@@ -27,7 +25,7 @@ bool MemoryManager::allocateProcess(Process& process, bool isBestFit) {
                     }
                 }
             }
-        } else { // First-Fit
+        } else {
             for (int j = 0; j < freeHoles.size(); ++j) {
                 if (freeHoles[j].size >= seg.size) {
                     targetHoleIdx = j;
@@ -36,35 +34,30 @@ bool MemoryManager::allocateProcess(Process& process, bool isBestFit) {
             }
         }
 
-        // 3. If no hole was found for this segment, ROLLBACK
         if (targetHoleIdx == -1) {
-            freeHoles = backupHoles; // Restore original state
-            return false; // Allocation failed
+            freeHoles = backupHoles;
+            return false;
         }
 
-        // 4. Allocate segment
         seg.base = freeHoles[targetHoleIdx].base;
 
-        // Update the hole
         freeHoles[targetHoleIdx].base += seg.size;
         freeHoles[targetHoleIdx].size -= seg.size;
 
-        // If hole is fully consumed, remove it
         if (freeHoles[targetHoleIdx].size == 0) {
             freeHoles.removeAt(targetHoleIdx);
         }
     }
 
-    // If we made it here, all segments fit!
     allocatedProcesses.push_back(process);
     return true;
 }
 bool MemoryManager::allocateAdditionalSegment(Process& process, Segment& seg, bool isBestFit) {
     int targetHoleIdx = -1;
 
-    // Use the SAME logic as your standard allocation to find a hole
+
     if (isBestFit) {
-        int minLeftover = 2147483647; // Max Int
+        int minLeftover = 2147483647;
         for (int j = 0; j < freeHoles.size(); ++j) {
             if (freeHoles[j].size >= seg.size) {
                 int leftover = freeHoles[j].size - seg.size;
@@ -74,7 +67,7 @@ bool MemoryManager::allocateAdditionalSegment(Process& process, Segment& seg, bo
                 }
             }
         }
-    } else { // First-Fit
+    } else {
         for (int j = 0; j < freeHoles.size(); ++j) {
             if (freeHoles[j].size >= seg.size) {
                 targetHoleIdx = j;
@@ -83,12 +76,10 @@ bool MemoryManager::allocateAdditionalSegment(Process& process, Segment& seg, bo
         }
     }
 
-    if (targetHoleIdx == -1) return false; // Segment won't fit
+    if (targetHoleIdx == -1) return false;
 
-    // Update segment base
     seg.base = freeHoles[targetHoleIdx].base;
 
-    // Shrink the hole
     freeHoles[targetHoleIdx].base += seg.size;
     freeHoles[targetHoleIdx].size -= seg.size;
 
@@ -96,14 +87,12 @@ bool MemoryManager::allocateAdditionalSegment(Process& process, Segment& seg, bo
         freeHoles.removeAt(targetHoleIdx);
     }
 
-    // CRITICAL: Append the segment to the EXISTING process list
     process.segments.append(seg);
     return true;
 }
 
 void MemoryManager::rollbackProcess(QString name) {
-    // This is identical to deallocate, but specifically used
-    // when a segment fails to fit during the allocation phase.
+
     for (int i = 0; i < allocatedProcesses.size(); ++i) {
         if (allocatedProcesses[i].name == name) {
             for (const Segment& seg : allocatedProcesses[i].segments) {

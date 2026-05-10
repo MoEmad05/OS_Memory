@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include "MemoryCanvas.h"
 #include <QIntValidator>
-#include <QMessageBox> // Added this
+#include <QMessageBox>
 #include <QTableWidgetItem>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -39,19 +39,16 @@ void MainWindow::on_btnAddHole_clicked() {
     int addr = ui->inputHoleAddr->value();
     int size = ui->inputHoleSize->value();
 
-    // VALIDATION: Check if hole exceeds total memory limits
     if (addr + size > totalSize) {
         QMessageBox::critical(this, "Boundary Error",
                               QString("The hole (End: %1) exceeds the total memory size (%2)!").arg(addr + size).arg(totalSize));
         return;
     }
 
-    // If valid, add the hole and update the canvas
     memManager->addInitialHole(addr, size);
     ui->memoryCanvasWidget->updateMemory(totalSize, memManager->getHoles(), memManager->getAllocatedProcesses());
 }
 
-// STAGING: Adds a segment to the table, but DOES NOT allocate yet
 
 void MainWindow::on_btnAllocate_clicked() {
     if(!memManager) return;
@@ -81,7 +78,6 @@ void MainWindow::on_btnAllocate_clicked() {
         if (memManager->allocateAdditionalSegment(*existingProc, s, isBestFit)) {
             ui->memoryCanvasWidget->updateMemory(totalSize, memManager->getHoles(), processes);
         } else {
-            // FAILURE DETECTED: Delete the entire process because this segment didn't fit
             memManager->rollbackProcess(pName);
             ui->memoryCanvasWidget->updateMemory(totalSize, memManager->getHoles(), processes);
             QMessageBox::critical(this, "Allocation Failed",
@@ -107,15 +103,12 @@ void MainWindow::on_btnDeallocate_clicked() {
     QString procName = ui->inputDeallocateName->text();
     if(procName.isEmpty()) return;
 
-    // Try to deallocate. The function will return true if it found and deleted the segments.
     bool success = memManager->deallocateProcess(procName);
 
     if (success) {
-        // Update the canvas to show the newly freed holes
         ui->memoryCanvasWidget->updateMemory(totalSize, memManager->getHoles(), memManager->getAllocatedProcesses());
         ui->inputDeallocateName->clear();
     } else {
-        // Show an error so it doesn't fail silently!
         QMessageBox::warning(this, "Deallocation Error", "Could not find an allocated process named: '" + procName + "'");
     }
 }

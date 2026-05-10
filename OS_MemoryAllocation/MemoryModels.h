@@ -12,7 +12,7 @@ struct Hole {
 struct Segment {
     QString name;
     int size;
-    int base = -1; // -1 means unallocated
+    int base = -1;
 };
 
 struct Process {
@@ -20,4 +20,4 @@ struct Process {
     QVector<Segment> segments;
 };
 
-#endif // MEMORYMODELS_H
+#endif

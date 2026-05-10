@@ -23,4 +23,4 @@ private:
     void coalesceHoles();
 };
 
-#endif // MEMORYMANAGER_H
+#endif

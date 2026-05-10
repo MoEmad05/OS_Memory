@@ -1,0 +1,3 @@
+G:\ASU_JOURNEY\ASU\Some_Setups\QT\Main_Software_Tool\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\OS_MemoryAllocation.dir/objects.a
+G:\ASU_JOURNEY\ASU\Some_Setups\QT\Main_Software_Tool\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\OS_MemoryAllocation.dir/objects.a @CMakeFiles\OS_MemoryAllocation.dir\objects1.rsp
+G:\ASU_JOURNEY\ASU\Some_Setups\QT\Main_Software_Tool\Tools\mingw1310_64\bin\g++.exe -O3 -DNDEBUG -mwindows -Wl,--whole-archive CMakeFiles\OS_MemoryAllocation.dir/objects.a -Wl,--no-whole-archive -o OS_MemoryAllocation.exe -Wl,--out-implib,libOS_MemoryAllocation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\OS_MemoryAllocation.dir\linkLibs.rsp

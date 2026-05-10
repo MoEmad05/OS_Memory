@@ -9,7 +9,7 @@ class MemoryCanvas : public QWidget {
     Q_OBJECT
 
 public:
-    explicit MemoryCanvas(QWidget *parent = nullptr); // Only declaration
+    explicit MemoryCanvas(QWidget *parent = nullptr);
 
     void updateMemory(int totalSize, const QVector<Hole>& holes, const QVector<Process>& processes);
 
@@ -22,4 +22,4 @@ private:
     QVector<Process> currentProcesses;
 };
 
-#endif // MEMORYCANVAS_H
+#endif

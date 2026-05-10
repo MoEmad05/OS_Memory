@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
-#include "MemoryManager.h" // Include your logic header
+#include "MemoryManager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,14 +18,13 @@ public:
     ~MainWindow();
 
 private slots:
-    // These names should match your button names in the UI Designer
     void on_btnSetTotalSize_clicked();
     void on_btnAddHole_clicked();
     void on_btnAllocate_clicked();
     void on_btnDeallocate_clicked();
 private:
     Ui::MainWindow *ui;
-    MemoryManager *memManager; // The logic engine
+    MemoryManager *memManager;
     int totalSize = 0;
 };
 #endif

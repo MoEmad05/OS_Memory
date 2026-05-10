@@ -1,0 +1,9 @@
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/OS_MemoryAllocation.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/edit_cache.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/rebuild_cache.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/list_install_components.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/install.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/install/local.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/install/strip.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/OS_MemoryAllocation_autogen_timestamp_deps.dir
+G:/ASU_JOURNEY/ASU/6th_term/OS/Memory allocation Project/OS_Memory/OS_MemoryAllocation/build/Desktop_Qt_6_11_0_MinGW_64_bit-Release/CMakeFiles/OS_MemoryAllocation_autogen.dir
